@@ -1,4 +1,6 @@
 import streamlit
+import request
 streamlit.title('My healthy new diner!')
-streamlit.header('Breakfast Menu')
-streamlit.text('BB Oatmeal')
+streamlit.header('Fruity Fruit Advice!')
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response.jason())
